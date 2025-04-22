@@ -1,3 +1,7 @@
 from django.shortcuts import render
-from django.http import
+from django.http import HttpResponse
+
 # Create your views here.
+def credits(request):
+    content = "Nicky\nArina"
+    return HttpResponse(content, content_type="text/plain")
