@@ -26,6 +26,9 @@ SECRET_KEY = "django-insecure-mwy#ommv$7_5u4r%j&ko%0#k3)=s+36uync18fh3-izsm!l4=u
 DEBUG = True
 
 ALLOWED_HOSTS = []
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 
